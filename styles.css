@@ -1,0 +1,254 @@
+:root {
+    --lapis-lazuli: #1a5b77ff;
+    --rust: #be3515ff;
+    --butterscotch: #e09339ff;
+    --brunswick-green: #345743ff;
+    --heading-color: #333;
+    --text-color: #666;
+}
+
+/* Základní stylování */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+}
+
+header img {
+    width: 90%;
+    margin: 0;
+    top: 0;
+}
+
+header {
+    margin-top: -10%;
+}
+
+/* Navigační menu */
+.custom-nav {
+    position: fixed;
+    bottom: 0; /* Navigace bude na spodní části obrazovky */
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(224, 147, 57, 0.7); /* Průhledná barva pozadí */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Stín nad navigací */
+    padding: 0;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, top 0.3s ease;
+    z-index: 1000;
+    backdrop-filter: blur(5px); /* Rozmazání pozadí za navigací */
+    -webkit-backdrop-filter: blur(5px); /* Podpora pro Safari */
+}
+
+/* Když je navigace přichycená nahoře */
+.custom-nav.sticky {
+    position: fixed;
+    top: 0; /* Přichycení navigace nahoře při scrollování */
+    bottom: auto; /* Vypne umístění navigace dole */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Stín pod navigací */
+}
+
+
+/* Záhlaví */
+.custom-header {
+    padding-bottom: 20px;
+}
+
+.custom-title {
+    color: var(--heading-color);
+    text-align: center;
+}
+
+/* Nadpisy sekcí */
+.custom-h2 {
+    color: var(--heading-color);
+    font-size: 2rem;
+}
+
+/* Text */
+.custom-text {
+    font-size: 1.1rem;
+}
+
+/* Box pro mapu */
+.custom-box {
+    color: #666;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid var(--butterscotch);
+    border-radius: 8px;
+   
+}
+
+/* Tlačítka */
+.custom-btn {
+    background-color:transparent;
+    border: 2px solid var(--rust);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 1s ease;
+}
+
+.custom-btn:hover {
+    background-color: var(--butterscotch);
+}
+
+.form-control {
+    height: 35px;
+    outline: none;
+    border: 2px solid var(--butterscotch);
+    background: transparent;
+    padding: 20px 10px;
+    border-radius: 5px;
+    transition: .5s;
+    color: white;
+    font-size: 20px;
+  }
+
+  .form-control:focus {
+    background: var(--butterscotch);
+  }
+
+
+
+/* Sekce Obřad a Oslava */
+.datum_blok, .misto_blok {
+    padding: 20px;
+}
+
+.custom-icon {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.custom-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.custom-image:hover {
+    transform: scale(1.05);
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+.obrazek {
+    margin-top: 20px;
+}
+
+/* Textové bloky */
+.datum_blok p, .misto_blok p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+
+.custom-h2 {
+    font-size: 2rem;
+}
+
+.custom-text {
+    font-size: 1.2rem;
+}
+
+.custom-btn:hover {
+    background-color: var(--butterscotch);
+}
+
+/* Ikony a obrázky */
+.custom-icon {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.custom-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.custom-image:hover {
+    transform: scale(1.05);
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.nav-item {
+    margin: 10px 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.nav-item.active {
+    color: var(--lapis-lazuli);
+    font-weight: bold;
+}
+
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: #333; /* Výchozí barva textu */
+    padding-left: 25px; /* Místo pro šipku */
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--rust); /* Barva textu při hoveru */
+}
+
+
+/* Dress Code Sekce */
+#dress-code {
+    padding: 40px 20px;
+    border-radius: 8px;
+}
+
+.custom-h2 {
+    font-size: 1.8rem;
+    color: var(--heading-color);
+    margin-bottom: 20px;
+}
+
+.custom-text {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Barevné kruhy */
+.color-palette {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Mezera mezi kruhy */
+}
+
+.color-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.section-offset {
+    padding-top: 70px; /* Odpovídá výšce navigace */
+}
